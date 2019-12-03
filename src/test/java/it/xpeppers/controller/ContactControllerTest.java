@@ -149,12 +149,7 @@ public class ContactControllerTest {
         verify(repository).delete(eq(contact));
     }
     
-    @Test
-    public void testLucky() {
-        Contact contact = new Contact();
-        contact.setId(ID);
-        assertEquals(1, contact.getId(),"Contact Id should be equal");
-    }
+   
     private String json(Object o) throws IOException {
         return new ObjectMapper().writeValueAsString(o);
     }
